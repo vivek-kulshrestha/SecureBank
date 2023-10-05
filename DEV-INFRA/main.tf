@@ -7,7 +7,7 @@ terraform {
 }
 provider "google" {
     version = "3.5.0"
-    project = "qwiklabs-gcp-02-998a1f970daa"
+    project = "in-gcp-apa-con-saadk-sbx-1"
     region  = "us-central1"
     zone    = "us-central1-c"
 }
@@ -35,7 +35,7 @@ resource "google_compute_address" "vm_static_ip" {
 }
 # New resource for the storage bucket our application will use.
 resource "google_storage_bucket" "example_bucket" {
-  name     = "qwiklabs-gcp-02-998a1f970daa"
+  name     = "in-gcp-apa-con-saadk-sbx-1"
   location = "US"
   website {
     main_page_suffix = "index.html"
