@@ -14,6 +14,6 @@ provider "google" {
 
 resource "google_storage_bucket" "bucket" {
   name                        = "analog-provider-401506-bucket1"
-  project                     = analog-provider-401506
-  location                    = asia-south1
+  project                     = "analog-provider-401506"
+  location                    = "asia-south1"
     }
