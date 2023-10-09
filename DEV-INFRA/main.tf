@@ -34,13 +34,13 @@ provider "google" {
  #   name = "terraform-static-ip"
 #}
 # New resource for the storage bucket our application will use.
-#resource "google_storage_bucket" "example_bucket" {
+resource "google_storage_bucket" "example_bucket" {
   name     = "in-gcp-apa-con-saadk-sbx-1"
   location = "US"
  # website {
   #  main_page_suffix = "index.html"
    # not_found_page   = "404.html"
-  #}
+  }
 #}
 # Create a new instance that uses the bucket
 #resource "google_compute_instance" "another_instance" {
