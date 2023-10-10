@@ -6,7 +6,7 @@ terraform {
     }
 }
 provider "google" {
-    version = "3.5.0"
+    version = ""5.1.0"
     project = "analog-provider-401506"
     region  = "asia-south1"
     zone    = "as-south1-c"
