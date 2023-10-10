@@ -13,7 +13,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "bucket" {
-  name                        = "analog-provider-401506-bucket1"
+  name                        = "analog-provider-401506-bucket2"
   project                     = "analog-provider-401506"
   location                    = "asia-south1"
     }
