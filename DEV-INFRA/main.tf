@@ -18,7 +18,7 @@ resource "google_storage_bucket" "bucket" {
   location                    = "asia-south1"
     }
 
-resource "google_storage_bucket" "bucket" {
+resource "google_storage_bucket" "bucket1" {
   name                        = "analog-provider-401506-bucket3"
   project                     = "analog-provider-401506"
   location                    = "asia-south1"
