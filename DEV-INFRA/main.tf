@@ -17,3 +17,32 @@ resource "google_storage_bucket" "bucket" {
   project                     = "analog-provider-401506"
   location                    = "asia-south1"
     }
+
+resource "google_storage_bucket" "bucket" {
+  name                        = "analog-provider-401506-bucket3"
+  project                     = "analog-provider-401506"
+  location                    = "asia-south1"
+    }
+
+resource "google_compute_network" "vpc_network" {
+    name = "terraform-network"
+}
+resource "google_compute_instance" "vm_instance" {
+    name                = "terraform-instance"
+    machine_type        = "e2-medium"
+    tags                 = ["web", "dev"]
+    boot_disk {
+      initialize_params {
+          image = "cos-cloud/cos-stable"
+      }
+    }
+    network_interface {
+        network = google_compute_network.vpc_network.self_link
+        access_config {
+            nat_ip = google_compute_address.vm_static_ip.address
+        }
+    }
+}
+resource "google_compute_address" "vm_static_ip" {
+    name = "terraform-static-ip"
+}
